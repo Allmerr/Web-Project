@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url(images/pattern-background-desktop.svg);
+    font-family: 'Red Hat Display';
+}
+
+.container{
+    width: 450px;
+    margin: 20px auto;
+    border-radius: 20px;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.1);
+    
+}
+
+.hero{
+    background-repeat: no-repeat;
+    background-image: url(images/illustration-hero.svg);
+    border-radius: 20px;
+}
+
+.hero img{
+    border-radius: 20px 20px 0 0;
+}
+
+.hero-text {
+    background-color: #fff;
+    margin-top: -10px;
+    text-align: center;
+    padding: 30px 50px;
+    border-radius: 0 0 20px 20px;
+    color: hsl(223, 47%, 23%);
+}
+
+.hero-text h1{
+    font-weight: 900;
+}
+
+.hero-text p {
+    color: #aaa;
+    margin: 20px;
+}
+
+.hero-text .pb{
+    font-weight: 900;
+    color: hsl(222, 13%, 38%);
+    margin-top: 10px;
+    cursor: pointer;
+    display: block;
+}
+
+.pb:hover {
+    color: hsl(221, 54%, 44%);
+}
+
+.hero-text .textin {
+    background-color: hsl(225, 100%, 98%);
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 20px 0;
+}
+
+.hero-text button{
+    margin-top: 20px;
+    width: 100%;
+    background-color:  #382ae1;
+    border-radius: 20px;
+    margin: 30px 0;
+    border: none;
+    padding: 10px;
+    color: #fff;
+    font-size: 18px;
+    font-family: 'Red Hat Display';
+}
+
+.hero-text button:hover{
+    background-color: #6c62e0;
+}
+
+.hero-text .textin a{
+    color: #6f62e4 !important;
+    font-weight: 900;
+}
+
+.hero-text .textin a:hover{
+    color: #a29ae6 !important;
+}
+

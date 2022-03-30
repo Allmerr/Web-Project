@@ -1,0 +1,114 @@
+body{
+    background-color: #0d1a2d;
+    font-family: 'Outfit';
+}
+
+.container{
+    width: 300px;
+    background-color: #15273f;
+    box-sizing: border-box;
+    box-shadow: 0 25px 5px 8px #0c1729;
+    margin: 100px auto;
+    border-radius: 20px;
+    padding: 25px;
+    position: relative;
+}
+
+.container .img{
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.img:hover ~ .view{
+    opacity: 0.9;
+}
+
+.container .view{
+    position: absolute;
+    top: 120px;
+    left: 42%;
+    opacity: 0;
+}
+
+.container h3{
+    color: #ecf2f6;
+    cursor: pointer;
+}
+
+.container h3:hover{
+    color: #00f7f4;
+}
+
+.container span{
+    color: #8fa4c1;
+    font-size: 0.93em;
+    font-weight: 300;
+}
+
+.container .naro{
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.narodalam{
+    display: flex;
+    justify-content: space-between;
+    width: 35%;
+    color: #00f7f4;
+    font-size: 0.95em;
+}
+
+.narodalam img{
+    width: 11px;
+    height: 18px;
+    margin-top: 17px;
+}
+
+.naroujung{
+    display: flex;
+    width: 35%;
+    font-size: 0.9em;
+    justify-content: space-between;
+    align-items: center;
+    color: #9bbae5;
+}
+
+.naroujung img{
+    width: 17px;
+    height: 17px;
+}
+
+.container hr{
+    border-top: 0.5px;
+    opacity: 0.19;
+}
+
+.end{
+    display: flex;
+    align-items: center;
+}
+
+.end img{
+    height: 37px;
+    width: 37px;
+}
+
+.end p{
+    padding-left: 15px;
+    font-size: 0.95em;
+    color: #8fa4c1;
+}
+
+.end p span{
+    font-weight: bold;
+    color: #eff9ff;
+    cursor: pointer;
+}
+
+.end p span:hover{
+    color: #00f7f4;
+}
