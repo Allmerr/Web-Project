@@ -1,0 +1,81 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-size: 15px;
+    font-family:  'Lexend Deca';
+}
+
+.container{
+    width: 900px;
+    border-radius: 10px;
+    margin: 100px auto;
+    color:  hsla(0, 0%, 100%, 0.75);
+    display: flex;
+    height: 460px;
+    overflow: hidden;
+}
+
+.container h1{
+    font-family: 'Big Shoulders Display';
+    color: hsl(0, 0%, 95%);
+    text-transform: uppercase;
+    font-size: 2.5em;
+    padding: 35px 0 35px 0;
+}
+
+.container p{
+    font-size: 0.95em;
+    padding: 0 20px 0 0;
+}
+
+.container .sedans{
+    background-color: hsl(31, 77%, 52%);
+    padding: 40px;
+    flex-grow: 1;
+    line-height: 25px;
+}
+
+.container .suvs{
+    background-color: hsl(184, 100%, 22%);
+    padding: 40px;
+    flex-grow: 1;
+    line-height: 25px;
+}
+
+.container .luxury{
+    background-color: hsl(179, 100%, 13%);
+    padding: 40px;
+    flex-grow: 1;
+    line-height: 25px;
+}
+
+.container .but{
+    width: 140px;
+    height: 45px;
+    background-color: #fff;
+    line-height: 45px;
+    text-align: center;
+    border-radius: 40px;
+    margin-top: 60px;
+}
+
+.container .sedans .but{
+    color: hsl(31, 77%, 52%);
+}
+.container .suvs .but{
+    color: hsl(184, 100%, 22%);
+}
+.container .luxury .but{
+    color: hsl(179, 100%, 13%);
+}
+
+@media (max-width: 576px) {
+    .container{
+        flex-direction: column;
+        height: inherit;
+        width: 80%;
+    }
+}
