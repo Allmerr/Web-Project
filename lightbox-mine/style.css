@@ -1,0 +1,253 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
+
+
+/* === my style === */
+@font-face {
+    font-family: 'Bebas';
+    src: url(bebas.woff) format('woff');
+}
+
+
+body{
+    font: 18px/32px 'Bebas', Arial;
+    background-color: #ddd;
+}
+
+
+h1{
+    font-size: 80px;
+    padding: 50px 0;
+    text-align: center;
+    text-shadow: 1px 1px 1px #fff;
+}
+
+.container{
+    background-color: #fff;
+    width: 600px;
+    padding: 20px;
+    margin: auto;
+    border-radius: 5px;
+    box-shadow: 0 0 4px 1px rgba(0,0,0,0.4);
+}
+
+.container li a img {
+    border-radius: 50%;
+}
+
+.container li {
+    width: 120px;
+    height: 120px;
+    /* overflow: hidden; */
+    border-radius: 50%;
+    border: 4px solid #666;
+    position: relative;
+    float: left;
+    margin: 10px;
+}
+
+.container span {
+    display: inline-block;
+    background-color: rgba(200,200,200,0.5);
+    width: 120px;
+    height: 120px;
+    text-align: center;
+    line-height: 120px;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transform: scale(0);
+    transition: 0.3s;
+    color: #eee;
+    text-shadow: 1px 1px #aaa;
+}
+
+.container a:hover span{
+    opacity: 1;
+    transform: scale(1);
+}
+
+.overlay {
+    background-color: rgba(0,0,0,0);
+    transition: 0.7s;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: 9;
+    padding: 80px 0;
+    text-align: center;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+.overlay:target{
+    top: 0;
+    left: 0;
+    width: auto;
+    height: auto;
+    background-color: rgba(0,0,0,0.7);
+}
+
+.overlay img {
+    max-height: 100%;
+    opacity: 0;
+}
+
+.overlay:target img {
+    animation: animCloseNav 0.5s 0.5s forwards;
+}
+
+.close {
+    display: inline-block;
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    margin-left: -38px;
+    color: #eee;
+    text-decoration: none;
+    font-size: 18px;
+    background-color: #000;
+    line-height: 0;
+    padding: 18px 10px;
+    border: solid 1px #fff;
+    opacity: 0;
+}
+
+.overlay:target .close{
+    animation: animCloseNav 0.5s 0.5s forwards ;    
+}
+
+.next, .prev{
+    width: 57px;
+    height: 93px;
+    background-image: url(next.png);
+    position: absolute;
+    text-indent: -9999px;
+    top: 40%;
+    margin-left: 50px;
+    opacity: 0;
+}
+
+.prev {
+    background-image: url(left.png);
+    margin-left: -100px;
+}
+
+.overlay:target .next{
+    animation: animCloseNav 0.5s 0.5s forwards ;
+}
+
+.overlay:target .prev{
+    animation: animCloseNav 0.5s 0.5s forwards ;
+}
+
+
+@keyframes animCloseNav {
+    0%{
+        opacity: 0;
+        /* margin-top: -50px; */
+    }
+    100%{
+        opacity: 1;
+        /* margin-top: 0; */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
