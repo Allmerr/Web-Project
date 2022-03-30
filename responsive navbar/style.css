@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+
+/* Navbar */
+
+nav {
+    display: flex;
+    background-color: rgb(180,78,232);
+    /* border: solid; */
+    justify-content: space-around;
+    /* padding: 20px 0; */
+    height: 50px;
+    align-items: center;
+    color: rgb(234,192,255);
+}
+
+nav .logo{
+    font-family: 'Pacifico';
+    letter-spacing: 3px;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    width: 40%;
+    justify-content: space-between;
+    /* border: solid; */
+}
+
+nav ul li a{
+    color: rgb(234,192,255);
+    text-decoration: none;
+}
+
+nav ul li a:hover{
+    color: rgb(250, 240, 255);
+}
+
+
+/* hambuger menu */
+.menu-toggle{
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    /* border: solid; */
+    position: relative;
+}
+
+.menu-toggle input{
+    width: 40px;
+    height: 28px;
+    opacity: 0;
+    z-index: 9;
+    left: -6px;
+    top: -5px;
+    position: absolute;
+    cursor: pointer;
+}
+
+
+
+.menu-toggle span {
+    display: block;
+    border-radius: 3px;
+    background-color: rgb(234,192,255);
+    width: 28px; 
+    height: 3px;
+    transition: all 0.5s;
+}
+
+
+/* hamburger menu animation */
+.menu-toggle span:nth-child(2){
+    transform-origin: 0 0;
+}
+
+.menu-toggle span:nth-child(4){
+    transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked ~ span:nth-child(2){
+    background-color: #fff;
+    transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.menu-toggle input:checked ~ span:nth-child(3){
+    transform: scale(0);
+    opacity: 0;
+}
+
+.menu-toggle input:checked ~ span:nth-child(4){
+    background-color: #fff;
+    transform: rotate(-45deg) translate(-1px, 0);
+}
+
+
+
+
+
+/* responsive breakpoint */
+@media (max-width: 768px){
+    nav ul{
+        width: 50%;
+    }
+}
+
+@media (max-width: 576px){
+    nav ul{
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+        background-color: #000;
+        z-index: -9;
+        background-color: rgb(180,78,232);
+        transform: translateX(100%);
+        transition: 0.4s;
+    }
+    .menu-toggle{
+        display: flex;
+    }
+
+    .slide {
+        transform: translateX(0);
+    }
+}
+
