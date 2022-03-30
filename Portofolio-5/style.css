@@ -1,0 +1,12 @@
+body {
+  padding-bottom: 20px;
+}
+
+.jumbotron {
+  padding-top: 5rem;
+  background-color: #e2edff;
+}
+
+section {
+  scroll-margin-top: 60px;
+}
