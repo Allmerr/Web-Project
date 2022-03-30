@@ -1,0 +1,72 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: 'Kumbh Sans';
+    background-image: url(images/bg-pattern-bottom.svg);
+    background-color: hsl(185, 75%, 39%);
+}
+
+.container{
+    width: 350px;
+    margin: 100px auto;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px 2px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.container .bg-top{
+    width: 100%;
+    height: 142px;
+    background-image: url(images/bg-pattern-card.svg);
+}
+
+.container .bg-bottom{
+    background-color: #fff;
+    color: hsl(0, 0%, 59%);
+    text-align: center;
+    padding-top: 80px;
+}
+
+.container .bg-bottom h3{
+    color: hsl(229, 23%, 23%);
+    font-weight: 700;
+}
+
+.container .bg-bottom h3 span{
+    color: hsl(0, 0%, 59%);
+    font-weight: 400;
+}
+
+.container .bg-bottom .city{
+    font-size: 0.98em;
+    margin-top: 15px;
+}
+
+.container .bg-bottom img{
+    border-radius: 50%;
+    position: absolute;
+    z-index: 9;
+    top: 105px;
+    left: 123px;
+    border: solid white 4px;
+}
+
+.container .bg-bottom hr{
+    border-top: 1px solid rgb(209, 207, 207);
+    margin-top: 10px;
+}
+
+.container .bg-bottom .info{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 0 20px 20px 20px;
+}
+
+.container .bg-bottom .info p{
+    font-size: 0.75em;
+    padding-top: 4px;
+}

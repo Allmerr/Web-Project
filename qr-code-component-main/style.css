@@ -1,0 +1,36 @@
+body{
+    background-color: #d5e1ef;
+    font-family: 'Outfit', sans-serif;
+    font-size: 15px;
+}
+
+
+.container{
+    background-color: #fff;
+    margin: 100px auto;
+    width: 270px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+}
+
+.container img{
+    width: 240px;
+    height: 240px; 
+    margin: 20px auto 10px;
+    border-radius: 20px;
+}
+
+.container h3{
+    color: #233657;
+    padding: 0;
+    margin: 15px;
+    text-align: center;
+}
+
+.container span{
+    color: #95969f;
+    text-align: center;
+    padding: 0 20px 20px 25px;
+    font-size: 0.88em;
+}
