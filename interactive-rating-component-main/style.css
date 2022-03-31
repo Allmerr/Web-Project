@@ -1,0 +1,129 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: hsl(216, 12%, 8%);
+    font-family: 'Overpass';
+}
+
+.container{
+    color: hsl(0, 0%, 100%);
+    background-color:  hsl(213, 19%, 18%);
+    width: 380px;
+    margin: 100px auto;
+    padding: 25px 30px;
+    border-radius: 25px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.container .icon{
+    width: 50px;
+    height: 50px;
+    line-height: 55px;
+    background-color: #31373d;  
+    text-align: center;
+    border-radius: 50%;  
+}
+
+.container h2{
+    margin-top: 30px;
+}
+
+.container p{
+    margin-top: 25px;
+    font-size: 0.9em;
+    line-height: 20px;
+    color: hsl(217, 12%, 63%);
+}
+
+.container .rate{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.container .rate .anak{
+    background-color: #31373d;
+    border-radius: 25px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    border: none;
+    color: #fff;
+}
+
+.container .rate button{
+    color: #fff;
+}
+
+.container .rate .anak:hover {
+    background-color: hsl(216, 12%, 54%);
+}
+
+.container .submit{
+    background-color: hsl(25, 97%, 53%);
+    height: 45px;
+    border-radius: 20px;
+    margin-top: 20px;
+    text-align: center;
+    line-height: 45px;
+    font-size: 1.1em;
+    cursor: pointer;
+}
+
+.container .submit:hover{
+    color: hsl(25, 97%, 53%) !important;
+    background-color: #fff !important;
+}
+
+/* function */
+.gantiBC{
+    background-color: hsl(25, 97%, 53%) !important;
+}
+
+.gantibc{
+    color: hsl(25, 97%, 53%) !important;
+    background-color: #fff !important;
+}
+
+/* thank you */
+.after{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: hsl(213, 19%, 18%);
+    top: 0;
+    left: 0;
+    border-radius: 25px;
+    padding: 30px;
+    box-sizing: border-box;
+    display: none;
+    text-align: center;
+}
+
+.after .img-after{
+    text-align: center;
+    margin-left: -10px;
+}
+
+.after .div-p{
+    background-color: #31373d;
+    text-align: center;
+    width: 200px;
+    height: 40px;
+    border-radius: 20px;
+    margin: auto;
+}
+
+.after .div-p .p-after{
+    font-size: .9em;
+    line-height: 40px;
+    text-align: center;
+    color: hsl(25, 95%, 63%);
+
+}
