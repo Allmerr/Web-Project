@@ -1,0 +1,102 @@
+/* function */
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/* styles */
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: 'Poppins';
+    background-color: hsl(0, 0%, 98%);
+}
+
+.container{
+    text-align: center;
+    padding: 40px 80px;
+    color: hsl(234, 12%, 34%);
+}
+
+.jumbotron .light{
+    font-weight: 300;
+}
+
+.jumbotron p{
+    margin-top: 20px;
+    color:  hsl(229, 6%, 66%);
+}
+
+.cards{
+    /* display: flex;
+    justify-content: center;
+    flex-wrap: wrap; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* grid-template-rows: ; */
+    grid-template-areas: '. red .' 'cyan red blue' 'cyan orange blue' '. orange .';
+    margin-top: 30px;
+}
+
+.cards .card{
+    max-width: 350px;
+    box-sizing: border-box;
+    text-align: left;
+    background-color: #fff;
+    padding: 20px 50px 20px 20px;
+    font-size: 15px;
+    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.2);/* offset-x | offset-y | blur-radius | spread-radius | color */
+    border-radius: 5px;
+    margin: 15px;
+}
+
+.cards .card img{
+    float: right;
+    margin: 25px 0 25px 0;
+}
+
+.cyan {
+    border-top: 3px solid hsl(180, 62%, 55%);
+    grid-area: cyan;
+}
+
+.red{
+    border-top: 3px solid hsl(0, 78%, 62%);
+    grid-area: red;
+}
+
+.orange{
+    border-top: 3px solid hsl(34, 97%, 64%);
+    grid-area: orange;
+}
+
+.blue{
+    border-top: 3px solid hsl(212, 86%, 64%);
+    grid-area: blue;
+}
+
+/* responsive breakpoint */
+@media (max-width:900px) {
+    .cards{
+        grid-template-columns: 1fr;
+        grid-template-areas: 'cyan' 'red' 'orange' 'blue';
+    }
+
+    .container{
+        padding: 60px 10px;
+    }
+
+    .cards .card{
+        max-width: 100%;
+    }
+}
+
+
