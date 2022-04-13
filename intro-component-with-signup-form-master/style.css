@@ -1,0 +1,243 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Poppins';
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/bg-intro-desktop.png);
+    background-color: hsl(0, 100%, 74%) ;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+    padding-left: 150px;
+}
+
+.text h1{
+    font-size: 2.7em;
+    max-width: 400px;
+    margin-bottom: 20px;
+}
+
+.text p{
+    max-width: 500px;
+}
+
+.reg{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.reg .advertising{
+    width: 80%;
+    background-color: hsl(248, 32%, 49%);
+    color: #fff;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 6px 0px rgba(0, 0, 0, 0.18);
+    margin-bottom: 20px;
+}
+
+.reg .advertising p span{
+    font-weight: bold;
+}
+
+.reg form{
+    width: 80%;
+    background-color: #fff;
+    box-sizing: border-box;
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.reg form input, .reg form button{
+    box-sizing: border-box;
+    width: 100%;
+    font-family: 'Poppins';
+    height: 60px;
+    padding-left: 30px;
+    font-size: 0.9em;
+    color: hsl(249, 10%, 26%);
+    margin-bottom: 25px;
+    font-weight: bold;
+    border-radius: 5px;
+    border: hsl(245, 14%, 85%) 1px solid;
+
+}
+
+.reg form input.error{
+    color: hsl(0, 100%, 74%) !important;
+}
+
+.reg form input:focus{
+    outline: none;
+    border: hsl(249, 10%, 26%) 1px solid;
+    color: hsl(249, 10%, 26%);
+}
+
+.reg form button{
+    background-color: hsl(154, 59%, 51%);
+    border-bottom:  solid 3px hsl(156, 62%, 42%);
+    border-top:  solid .5px rgba(0, 0, 0, 0.2);
+    border-left:  solid .5px rgba(0, 0, 0, 0.2);
+    border-right:  solid .5px rgba(0, 0, 0, 0.2);
+    font-size: 1.05em;
+    padding: 0;
+    color: white;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.reg form button:active {
+	box-shadow: 0 0 hsl(154, 87%, 34%);
+    transform: translateY(2px);
+    background-color: hsl(154, 47%, 49%);
+}
+
+.reg form p{
+    font-size: 0.75em;
+    color: hsl(246, 25%, 77%);
+    text-align: center;
+    font-size: 'Poppins';
+}
+
+.reg form p span{
+    color: hsl(0, 100%, 74%);
+    font-weight: bold;
+}
+
+.reg form .pra-input{
+    position: relative;
+    margin-bottom: 5px;
+}
+
+.reg form .pra-input img{
+    position: absolute;
+    right: 15px;
+    top: 18px;
+}
+
+.reg form .pra-input img{
+    display: none;
+}
+
+
+/* functions */
+.none-active{
+    display: none;
+}
+
+.input-false{
+    border: hsl(0, 100%, 74%) 1px solid !important;
+}
+
+p.p-input{
+    position: absolute;
+    right: 0;
+    top: 60px;
+    font-size: 12px;
+    font-style: italic;
+    color: hsl(0, 100%, 74%) !important;
+    display: none;
+}
+
+
+.reg form input.error::placeholder{
+    color: hsl(0, 100%, 74%);
+}
+
+.reg form input.error{
+    color: hsl(249, 10%, 26%);
+}
+
+/* responsive breakpoint */
+@media (max-width:1150px) {
+    .text{
+        padding-left: 50px;
+    }
+}
+
+@media (max-width:1050px) {
+    .text{
+        padding-left: 50px;
+    }
+
+    .reg .advertising{
+        width: 90%;
+    }
+
+    .reg form{
+        width: 90%;
+    }
+}
+
+
+
+@media (max-width:875px) {
+    .text{
+        padding-left: 50px;
+        text-align: center;
+    }
+}
+
+
+
+@media (max-width:800px) {
+    .container{
+        grid-template-columns: 1fr;
+    }
+
+    .text{
+        padding-left: 0px;
+        text-align: center;
+        margin-bottom: -120px;
+        padding: 0;
+    }
+
+    .text h1{
+        font-size: 1.3em;
+        max-width: inherit;
+    }
+
+    .text p{
+        margin: 0 auto;
+    }
+
+    .reg .advertising, .reg form{
+        margin: auto;
+    }
+
+    .reg form input, .reg form button{
+        margin-bottom: 15px;
+    }
+
+    .reg .advertising{
+        margin-bottom: -30px;
+    }
+
+}
+
+
+@media (max-width:400px) {
+    .none-active{
+        display: inherit;
+    }
+
+    .reg .advertising p{
+        line-height: 30px;
+    }
+}
