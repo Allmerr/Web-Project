@@ -1,0 +1,224 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+.container{
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 40px; 
+}
+
+.container h1{
+    font-size: 3em;
+    /* font-weight: 700;
+    font-size: 50px; */
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.container h1 span{
+    font-weight: 300;
+    color: hsl(0, 0%, 59%);
+}
+
+.container h2{
+    font-weight: 300;
+}
+
+
+.container form input{
+    min-width: 400px;
+    height: 60px;
+    border-radius: 30px;
+    border: hsl(223, 100%, 88%) 1px solid;
+    padding: 25px;
+    box-sizing: border-box;
+    margin-top: 50px;
+    font-size: 16px;
+}
+
+.container form input::placeholder{
+    color: hsl(223, 100%, 88%);
+}
+
+.container form button{
+    min-width: 170px;
+    height: 60px;
+    border-radius: 30px;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: hsl(223, 87%, 63%);
+    /* offset-x | offset-y | blur-radius | spread-radius | color */
+    box-shadow: 0px 4px 8px 0px hsl(223, 100%, 88%);
+    cursor: pointer;
+}
+
+.container .jumbotron{
+    max-width: 580px;
+    margin-top: 80px;
+}
+
+
+.container ul{
+    width: 15%;
+    display: flex;
+    justify-content: space-between;
+    /* margin: auto; */
+    margin-left: 42%;
+    margin-top: 40px;
+}
+
+.container ul li{
+    list-style: none;
+}
+
+.container ul li a{
+    border: hsl(0, 0%, 59%) 0.5px solid;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    display: inline-block;
+}
+
+
+.container ul li a i{
+    line-height: 40px;
+    font-size: 20px;
+    color: hsl(223, 87%, 63%);
+}
+
+.container p{
+    color: hsl(0, 0%, 59%);
+    margin-top: 20px;
+}
+
+/* function */
+.container form input.error::placeholder{
+    color: hsl(354, 100%, 66%);
+}
+
+.container form input.error{
+    border: hsl(354, 100%, 66%) 1px solid;
+}
+
+.container form p.error-happen{
+    color: hsl(354, 100%, 66%);
+    font-style: italic;
+    margin-left: -320px;
+    display: none;
+}
+
+
+/* responsive breakpoint */
+@media (min-width:1900px) {
+    .container ul{
+        margin-left: 43%;
+    }
+}
+
+@media (max-width:1000px) {
+    .container ul{
+        width: 25%;
+        margin-left: 38%;
+    }
+
+
+}
+
+@media (max-width:600px) {
+    .container{
+        /* display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center; */
+        text-align: center;
+        width: 100%;
+        /* margin: auto; */
+    }
+
+    .container h1{
+        font-size: 2em;
+    }
+
+    .container form{
+        display: flex;
+        flex-direction: column;
+        /* width: 80%; */
+        margin: 0 30px;
+    }
+
+    .container form input{
+        min-width: 300px;
+    }
+
+    .container .jumbotron{
+        max-width: 80%;
+    }
+
+    
+    .container ul{
+        margin-left: 30%;
+        width: 40%;
+    }
+
+    .container form p.error-happen{
+        margin-left: 0;
+    }
+
+    .container input{
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 430px) {
+    
+    .container ul{
+        margin-left: 30%;
+    }
+
+    /* .container form p.error-happen{
+        margin-left: -100px;
+    } */
+
+
+
+}
+
+@media (max-width: 330px) {
+    .container{
+        width: 330px;
+    }
+
+    .container img{
+        width: 25%;
+    }
+
+    .container h1{
+        font-size: 1.5em;
+    }
+
+    .container h2{
+        font-size: 1.3em;
+    }
+
+    .container .jumbotron{
+        width: 50%;
+    }
+
+    .container form input{
+        min-width: 50%;
+    }
+
+    /* .container form p.error-happen{
+        margin-left: -50px;
+    } */
+
+}
