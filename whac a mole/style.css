@@ -1,0 +1,25 @@
+body{
+    text-align: center;
+}
+
+.grid{
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px,1fr));
+    width: 450px;
+    height: 450px;
+}
+
+.grid .square{
+    border: solid salmon 1px;
+    cursor: pointer;
+}
+
+.mole{
+    background-image: url(mole.jpg);
+    background-size: cover;
+}
+
+button {
+    margin-top: 20px;
+}
