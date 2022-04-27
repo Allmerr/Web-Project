@@ -1,0 +1,391 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@400;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100%;
+    font-family: 'Open Sans';
+}
+
+/* first section */
+.first{
+    padding: 60px 100px 0px 100px;
+}
+
+nav{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    width: 320px;
+    justify-content: space-around;
+    font-size: 1.1em;
+    cursor: pointer;
+}
+
+.content-first{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'left right';
+    margin-top: 40px;
+    gap: 60px;
+}
+
+.content-first .right img{
+    max-width: 100%;
+}
+
+.content-first .right{
+    grid-template: right;
+}
+
+.content-first .left{
+    grid-template: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.content-first .left h1{
+    font-family: 'Raleway';
+    font-size: 2.1em;
+}
+
+.content-first .left p{
+    font-size: 1.1em;
+    margin-top: 30px;
+}
+
+.content-first .left form{
+    display: flex;
+    margin-top: 30px;
+}
+
+.content-first .left form input{
+    flex: 0.7;
+    height: 50px;
+    margin-right: 10px;
+    border: 1px solid hsl(243, 87%, 12%);
+    padding: 20px;
+    font-family: 'Raleway';
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+    cursor: pointer;
+}
+
+.content-first .left form button{
+    flex: 0.3;
+    min-width: 20%;
+    height: 50px;
+    background-color: hsl(224, 93%, 58%);
+    border: none;
+    color: #fff;
+    font-size: 14px;
+    font-family: 'Raleway';
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 2px;
+}
+
+/* second section */
+
+.second::before{
+    content: '';
+    height: 60px;
+    width: 100%;
+    position: absolute;
+    top: -60px;
+    background-image: url(images/bg-curve-desktop.svg);
+    left: 0;
+    background-position: center;
+    background-size: cover;
+}
+
+.second{
+    padding: 80px 100px 80px 100px;
+    position: relative;
+    margin-top: 100px;
+    background-color: hsl(240, 75%, 98%);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'kiri kanan';
+    gap: 40px;
+}
+
+.second .kiri{
+    grid-area: kiri;
+    padding: 0px;
+}
+
+.second .kiri h1{
+    font-family: 'Raleway';
+    margin-bottom: 20px;
+}
+
+.second .kiri p{
+    font-size: 1.1em;
+    margin-top: 20px;
+}
+
+.second .kiri a{
+    display: block;
+    color: hsl(170, 45%, 43%);
+    font-size: 1.1em;
+    margin-top: 20px;
+}
+
+.second .kiri a::after{
+    content: url(images/icon-arrow.svg);
+}
+
+.second .kanan{
+    grid-area: kanan;
+    align-self: center;
+}
+
+.second .kanan img{
+    max-width: 100%;
+}
+
+.second .kiri .testimonial-box{
+    margin-top: 20px;
+    line-height: 25px;
+    max-width: 80%;
+    background-color: #fff;
+    padding: 20px;
+    font-size: 14px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px 0px rgba(0,0,0,.2);
+}
+
+.second .kiri .testimonial-box .avatar-testimonial{
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+}
+
+.second .kiri .testimonial-box .inline{
+    display: flex;
+    margin-top: 15px;
+}
+
+.second .kiri .testimonial-box .inline-inline{
+    line-height: 16px;
+    margin-left: 15px;
+}
+
+.second .kiri .testimonial-box .inline-inline p{
+    margin-top: 10px;
+}
+
+.second .kiri .testimonial-box .inline{
+    display: flex;
+}
+
+/* third section */
+.third{
+    background-color: hsl(238, 22%, 44%);
+    color: #fff;
+    padding: 80px 100px 80px 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'kirilah kananlah';
+    gap: 15px;
+}
+
+.third .kirilah p{
+    margin-top: 20px;
+}
+
+.third .kananlah{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.third .kananlah input{
+    font-family: 'Raleway';
+    padding: 20px;
+    border-radius: 2px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 400;
+    height: 50px;
+    margin-top: 15px;
+}
+
+.third .kananlah button{
+    width: 50%;
+    height: 50px;
+    font-family: 'Raleway';
+    border-radius: 2px;
+    border: none;
+    background-color: hsl(224, 93%, 58%);
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 15px;
+    font-weight: 700;
+}
+
+/* footer section */
+footer{
+    padding: 80px 100px 100px 100px;
+    background-color: hsl(243, 87%, 12%);
+    /* min-height: 65vh; */
+    color: #fff;
+}
+
+footer .content{
+    margin-top: 10px;
+    display: flex;
+    gap: 17%;
+    /* height: 60%; */
+}
+
+footer .satu{
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 1rem;
+    align-items: baseline;
+    margin-bottom: 0;
+    height: 50%;
+}
+
+footer .dua , footer .tiga{
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(1, minmax(40px, 1fr));
+}
+
+footer .empat{
+    display: flex;
+    list-style: none;
+    width: 200px;
+    justify-content: space-evenly;
+}
+
+footer .empat i{
+    line-height: 38px;
+    text-align: center;
+    margin: auto;
+    display: block;
+    width: 40px;
+    height: 40px;
+    border: solid #fff 1px;
+    border-radius: 20px;
+}
+
+.hilang{
+    display: none;
+}
+
+/* responsive breakpoint */
+
+@media (max-width:1300px) {
+    .first{
+        padding: 60px 30px 40px 30px;
+    }
+    .second{
+        padding: 60px 30px 60px 30px;
+    }
+    .second .kiri{
+        padding: 0px;
+    }    
+    .third{
+        padding:  60px 30px 60px 30px;
+    }
+    footer{
+        padding: 60px 30px 60px 30px;
+    }
+}
+
+@media (max-width:900px) {
+    .third{
+        text-align: center;
+        grid-template-columns: 1fr;
+        grid-template-areas: 'kirilah' 'kananlah';    
+    }
+
+    .third .kananlah button{
+        width: 100%;
+    }
+    
+}
+
+@media (max-width:800px) {
+    .content-first{
+        grid-template-columns: 1fr;
+        grid-template-areas: 'left' 'right';
+        text-align: center;
+    }
+    .first{
+        padding: 40px 20px 40px 20px;
+    }
+    nav{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .content-first{
+        padding: 10px;
+    }
+    .second::before{
+        background-image: url(images/bg-curve-mobile.svg);
+    }
+    .second{
+        padding: 40px 20px 20px 20px;
+        grid-template-columns: 1fr;
+        grid-template-areas: 'kiri' 'kanan';
+        text-align: center;
+    }
+    .second .kanan{
+        padding: 20px;
+    }
+    .second .kiri{
+        padding: 10px;
+    }    
+    .second .kiri .testimonial-box{
+        max-width: 100%;
+    }
+    .second .kiri .testimonial-box .inline{
+        justify-content: center;
+    }
+    .third{
+        padding:  60px 20px 60px 20px;
+    }
+    footer{
+        padding:  60px 20px 60px 20px;
+    }
+    footer .content .dua, footer .content .tiga{
+        display: none;
+    }
+    .hilang{
+        display: flex;
+        flex-direction: column;
+    }
+    footer .content{
+        display: flex;
+        flex-direction: column;
+    }    
+    footer .hilang p{
+        display: block;
+        margin-top: 15px;
+    }    
+    footer .empat{
+        text-align: center;
+        margin: 20px auto 0 auto;
+    }
+    footer .content .satu{
+        width: 200px;
+    }
+}
