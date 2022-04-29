@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+body{
+    background-color: #000;
+    display: flex;
+    height: 100vh;
+}
+
+h1{
+    margin: auto;
+    letter-spacing: 7px;
+    font-family: Orbitron;
+    color: aqua;
+}
