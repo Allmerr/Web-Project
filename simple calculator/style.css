@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    background: linear-gradient(to bottom, #F9544c 50%, #090c31 50%);
+}
+
+.calculator{
+    min-width: 400px;
+    color: #fff;
+    font-family: 'Roboto Mono';
+    margin: auto;
+    padding: 25px;
+    background-color: #15173c;
+    border-radius: 10px;
+    box-shadow: 0px 0px 8px #090c31;
+}
+
+.calculator .output{
+    line-height: 80px;
+    padding: 0 20px;
+    text-align: right;
+    width: 100%;
+    height: 80px;
+    font-size: 1.3em;
+}
+
+.calculator .buttons{
+    display: grid;
+    margin-top: 15px;
+    grid-template-columns: repeat(4, minmax(60px,1fr));
+}
+
+.calculator .buttons button{
+    min-height: 60px;
+    margin: 10px;
+    background-color: #15173c;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 1.1em;
+    border-radius: 5px;
+}
+
+.calculator .buttons button:hover{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.calculator .buttons .large-font{
+    font-size: 1.3em;
+}
+
+.calculator .buttons button.equal{
+    background-color: #F9544c;
+    grid-row: span 2;
+}
+
+.calculator .buttons button.zero{
+    grid-column: span 2;
+}
