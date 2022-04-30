@@ -1,0 +1,52 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    position: relative;
+    width: 806px;
+    margin: 100px auto;
+    border: 3px solid #000;
+    overflow: hidden;
+}
+
+.container .slide{
+    display: flex;
+}
+
+.anim{
+    animation: img .4s forwards;
+}
+
+@keyframes img {
+    0%{opacity: .3;}
+    100%{opacity: 1;}
+}
+
+.container button{
+    position: absolute;
+    z-index: 9;
+    border: none;
+    width: 40px;
+    height: 40px;
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    cursor: pointer;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.container button.prev{
+    left: 0;
+    top: 45%;
+    border-top-right-radius: 120px;
+    border-bottom-right-radius: 120px;
+}
+
+.container button.next{
+    right: 0;
+    top: 45%;
+}
