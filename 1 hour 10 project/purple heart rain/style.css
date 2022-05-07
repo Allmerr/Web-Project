@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+.heart{
+    position: fixed;
+    transform: translateY(-5vh);
+    animation: heartMove 3s linear forwards;
+    font-size: 1.5em;
+}
+
+@keyframes heartMove {
+    100%{
+        transform: translateY(100vh);
+    }
+}

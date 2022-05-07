@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+body{
+    display: flex;
+    height: 100vh;
+}
+
+button{
+    width: 160px;
+    height: 60px;
+    border-radius: 8px;
+    border: none;
+    margin: auto;
+    background-color: #92BA92;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 0 14px;
+}
+
+.modal-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.3);
+    opacity: 0;
+    transform: scale(0);
+    transition: .3s all;
+    display: flex;
+}
+
+.modal-container.active{
+    opacity: 1;
+    transform: scale(1);
+}
+
+.modal{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    width: 400px;
+    height: 200px;
+    text-align: center;
+    position: relative;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #92BA92;
+    color: #fff;
+}
+
+.modal button{
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    text-align: center;
+    line-height: 30px;
+    background-color: #EDE6DB;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
+
+.modal button i{
+    color: #000;
+}

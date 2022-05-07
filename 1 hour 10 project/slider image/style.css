@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+body{
+    display: flex;
+    height: 100vh;
+}
+
+.container{
+    width: 800px;
+    height:400px;
+    margin: 80px auto;
+    overflow: hidden;
+    border: 3px solid #171717;
+    position: relative;
+}
+
+.slider{
+    display: flex;
+}
+
+.slider.active{
+    animation: animSlider .3s forwards linear;
+}
+
+button{
+    position: absolute;
+    top: 46%;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: rgba(0,0,0,0.3);
+    cursor: pointer;
+    z-index: 9;
+}
+
+button.prev{
+    left: 0;
+    border-top-right-radius: 120px;
+    border-bottom-right-radius: 120px;
+}
+
+button.next{
+    right: 0;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+button i{
+    color: #fff;
+}
+
+.bullet{
+    position: absolute;
+    bottom: 5px;
+    left: 40.5%;
+    display: flex;
+    justify-content: space-evenly;
+    width: 170px;
+}
+
+.bull{
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: rgba(0,0,0,0.5);
+    cursor: pointer;
+}
+
+.bull.active{
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+@keyframes animSlider {
+    0%{
+        opacity: .3;
+    }
+    100%{
+        opacity: 1;
+    }
+}
