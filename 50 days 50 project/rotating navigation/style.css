@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+body{
+    overflow-x: hidden;
+    background-color: #333;
+    color: #222;
+}
+
+.container{
+    background-color: #fff;
+    transform-origin: top left;
+    transition: all .4s linear;
+    width: 100vw;
+    min-height: 100vh;
+}
+
+.container.show-nav{
+    transform: rotate(-17deg);
+}
+
+.container .content{
+    padding: 50px 50px;
+    max-width: 1000px;
+    margin: auto;
+    transition: .4s all linear;
+}
+
+.container.show-nav .content{
+    padding: 100px 50px;
+}
+
+.container .content img{
+    max-width: 100%;
+    width: 100%;
+}
+
+.container .content small{
+    font-style: italic;
+    color: #555;
+}
+
+.container .content p{
+    color: #333;
+}
+
+.container .circle-container{
+    position: fixed;
+    left: -100px;
+    top: -100px;
+}
+
+.container .circle{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #ff9797;
+    transform: rotate(0deg);
+    transition: all .4s linear;
+}
+
+.container.show-nav .circle{
+    transform: rotate(-50deg);
+}
+
+.container .circle-container button{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 9;
+    height: 100px;
+    width: 30px;
+    background: transparent;
+    color: #fff;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.container .circle-container button.open{
+    left: 60%;
+}
+
+.container .circle-container button.close{
+    top: 60%;
+    transform-origin: top left;
+    transform: rotate(70deg);
+}
+
+nav{
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    color: #fff;
+}
+
+.container.show-nav + nav ul li{
+    transform: translateX(0%);
+}
+
+nav ul li{
+    list-style: none;
+    margin-bottom: 10px;
+    transform: translateX(-100%);
+    transition: all .4s linear;
+    cursor: pointer;
+    text-decoration: uppercase;
+}
+
+nav ul li + li{
+    margin-left: 15px;
+    transform: translateX(-160%);
+}
+
+nav ul li + li + li{
+    margin-left: 30px;
+    transform: translateX(-180%);
+}
+
+
+nav ul li i{
+    margin-right: 10px;
+}

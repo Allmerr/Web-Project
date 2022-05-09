@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+:root{
+    --line-empty: #e0e0e0;
+    --line-fill: #3498db;
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+body{
+    height: 100vh;
+    background-color: #f6f7fb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.number-container{
+    display: flex;
+    justify-content: space-between;
+    max-width: 100vw;
+    width: 350px;
+    position: relative;
+    /* border: solid; */
+    margin-bottom: 30px;
+}
+
+.circle{
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    border: var(--line-empty) 3px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    transition: all .3s;
+}
+
+.circle.active{
+    border-color: var(--line-fill);
+}
+
+.number-container::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: var(--line-empty);
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: -1;
+}
+
+.progress-line{
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    background-color: var(--line-fill);
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: -1;
+    transition: .4s all;
+}
+
+button{
+    width: 120px;
+    height: 40px;
+    border-radius: 8px;
+    background-color: var(--line-fill);
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 0 5px;
+}
+
+button:hover{
+    box-shadow: rgba(0, 0, 0, 0.3) 0 0 15px;
+}
+
+button:active{
+    transform: scale(.98);
+}
+
+button.prev{
+    margin-right: 10px;
+}
+
+button.next{
+    margin-left: 10px;
+}
+
+button:disabled{
+    background-color: #e0e0e0;
+    cursor: not-allowed;
+}
