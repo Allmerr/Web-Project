@@ -1,0 +1,99 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: steelblue;
+}
+
+.container{
+    padding: 20px 40px;
+    background-color: rgba(0,0,0,0.4);
+    color: white;
+    border-radius: 10px;
+    min-width: 400px;
+    text-align: center;
+}
+
+.container h1{
+    margin-bottom: 20px;
+}
+
+.form-control{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    height: 40px;
+    border-bottom: 1px solid white;
+    margin-bottom: 20px;
+}
+
+.form-control input{
+    position: absolute;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    height: 100%;
+    color: white;
+}
+
+.form-control input::placeholder{
+    color: white;
+}
+
+.form-control input:focus, .form-control input:valid{
+    outline: none;
+}
+
+
+.submit-container button{
+    width: 49%;
+    height: 40px;
+    background-color: transparent;
+    border: white 1px solid;
+    color: white;
+    cursor: pointer;
+}
+
+.form-control label{
+    position: absolute;
+    color: white;
+}
+
+.form-control label span{
+    display: inline-block;
+    transition: all .3s;
+}
+
+.form-control > *{
+    display: block;
+}
+
+
+.content-ul{
+    color: white;
+    list-style: none;
+    min-width: 400px;
+    background-color: rgba(0,0,0,0.2);
+    padding: 20px 40px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+table{
+    width: 100%;
+    text-align: center;
+    margin: 20px 0px;
+}
+
+table,td,tr,th{
+    border: 1px solid #000;
+}
