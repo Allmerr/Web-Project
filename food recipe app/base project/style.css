@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,500;0,800;1,600&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+:root{
+    --orange-light: #d65108;
+    --orange-dark: #b54507;
+}
+
+/* container */
+
+/* search */
+.container{
+    padding: 20px 120px;
+}
+
+.search{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.search blockquote{
+    padding: 20px 0px;
+}
+
+.search .container-inputs{
+    min-width: 500px;
+    position: relative;
+}
+
+.search .container-inputs input{
+    width: 100%;
+    padding: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    border: 3px solid var(--orange-light);
+}
+
+.search .container-inputs button{
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 22px;
+    background-color: var(--orange-light);
+    border: none;
+    cursor: pointer;
+    border-radius: 0 20px 20px 0;
+}
+
+.search .container-inputs input:focus,
+.search .container-inputs input:valid{
+    outline: none;
+}
+
+/* cards */
+
+.cards{
+    margin: 40px 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    gap: 30px;
+}
+
+.cards .card{
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: rgba(149, 157, 165, 0.4) 0px 0px 24px;
+}
+
+.cards .card img{
+    width: 100%;
+}
+
+.cards .card button{
+    width: 60%;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #000;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+/* modal */
+
+.modal.active{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+}
+
+.modal-content{
+    max-width: 1000px;
+    border-radius: 10px;
+    margin: auto;
+    background-color: #fff;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.modal-content h3{
+    margin: 10px 0;
+}
+
+.modal-content p{
+    margin: 10px 0;
+    font-size: 0.9em;
+}
+
+.modal-content img{
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+.modal-content button{
+    width: 200px;
+    padding: 10px;
+    border: 1px solid #000;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.modal-content button a{
+    text-decoration: none;
+    color: #000;
+}
+
+.modal-content .close{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 1.5em;
+}
+
+
+
+/* responsive breakpoint */
+
+@media (max-width:800px){
+    .container{
+        padding: 20px;
+    }    
+    .modal{
+        overflow: scroll;
+    }   
+    .modal-content{
+        max-width: 500px;
+    }    
+}
+
+@media (max-width:500px){
+    .search .container-inputs{
+        min-width: 400px;
+    } 
+    .search h1{
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width:400px){
+    .search .container-inputs{
+        min-width: 300px;
+    } 
+}
