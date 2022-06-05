@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+body{
+    background-color: #f8fafc;
+}
+
+/* container */
+
+.container{
+    padding: 20px 120px;
+}
+
+/* search content */
+
+.search{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.search img{
+    max-width: 25%;
+}
+
+.search h1{
+    margin: 20px 0;
+}
+
+.search form{
+    min-width: 50%;
+    position: relative;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.search form input{
+    width: 100%;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #e2e8f0;
+    background-color: #f8fafc;
+}
+
+.search form input:focus,
+.search form input:valid{
+    outline: none;
+}
+
+.search form button{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    padding: 6px;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    background-color: #546cff;
+    color: #fff;
+    width: 40px;
+}
+
+.search form button:active{
+    transform: scale(.98);
+}
+
+
+/* result section */
+
+.result{
+    max-width: 100%;
+}
+
+.result .card{
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+
+.result .card h4 a{
+    color: rgb(0, 120, 0);
+}
+
+.result .card.error h3 a{
+    color: red;
+}
+
+
+
+/* responsive breakpoint */
+
+@media (max-width:1000px) {
+    .container{
+        padding: 20px 50px;
+    }
+
+    .search img{
+        max-width: 50%;
+    }
+
+    .search form{
+        min-width: 90%;
+    }  
+
+}
+
+@media (max-width:600px) {
+    .container{
+        padding: 20px 20px;
+    }
+
+      
+}
