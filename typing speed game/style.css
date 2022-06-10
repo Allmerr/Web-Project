@@ -1,0 +1,132 @@
+/* basic things */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #17a2b8;
+}
+
+/* container */
+
+.container{
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 750px;
+}
+
+/* wrap */
+.container .wrap{
+    border: solid 1px #bfbfbf;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+input{
+    opacity: 0;
+}
+
+/* text place */
+.text-place{
+    border-bottom: 1px solid #bfbfbf;
+    padding-bottom: 20px;
+}
+
+.text-place p span{
+    font-size: 21px;
+    position: relative;
+}
+
+.corect{
+    color: #56964f;
+}
+
+.incorect{
+    color: #cb3439;
+    background-color: pink;
+}
+
+.active::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: #17a2b8;
+    animation: animActive .5s ease-in-out infinite;
+}
+
+@keyframes animActive{
+    0%{
+        background-color: #fff;
+    }
+    100%{
+        background-color: #17a2b8;
+    }
+}
+
+
+/* result place */
+.result-place{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    font-size: 19px;
+}
+
+.result-place .result{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+}
+
+.result-place .result p:not(:first-child){
+    border-left: 1px solid #bfbfbf;
+    padding-left: 25px;
+}
+
+.result-place button{
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #17a2b8;
+    cursor: pointer;
+}
+
+.result-place button:active{
+    transform: scale(.98);
+}
+
+/* responsive breakpoint */
+
+@media (max-width:800px) {
+    .container{
+        max-width: 90%;
+    }
+    .result-place{
+        flex-direction: column;
+    }
+    .result-place .result{
+        width: 100%;
+    }
+    .result-place button{
+        width: 100%;
+        margin-top: 20px;
+    }
+    .result-place .result p:not(:first-child){
+        border-left: 0px solid #bfbfbf;
+    }
+}
