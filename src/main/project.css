@@ -1,0 +1,98 @@
+section.project {
+    text-align: center;
+    padding: 20px 120px;
+    color: var(--titlecolor);
+}
+
+section.project h1 {
+    font-family: "Pacifico";
+    padding: 40px 0;
+}
+
+nav.dark + section.project {
+    background-color: var(--darkBc);
+    color: var(--baccolor);
+}
+
+nav.dark + section.project .kotak-kecil {
+    background-color: var(--darkBc);
+    color: var(--baccolor);
+}
+
+nav.dark + section.project .kotak-kecil:hover {
+    background-color: hsla(51, 100%, 49%, 0.404);
+}
+
+.kotak-besar {
+    background-color: hsla(51, 100%, 49%, 0.404);
+    border: solid 1px var(--titlecolor);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.kotak-kecil:hover {
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.kotak-kecil {
+    border: solid 1px var(--titlecolor);
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+.kotak-kecil img {
+    width: 100%;
+}
+
+nav.dark + section.project .button-con {
+    border-color: var(--baccolor);
+}
+
+nav.dark + section.project .button-con button a {
+    color: var(--baccolor);
+}
+
+.button-con button {
+    width: 120px;
+    height: 40px;
+    margin: 10px;
+    background-color: transparent;
+    cursor: pointer;
+    border: solid 1px var(--titlecolor);
+}
+
+.button-con button a {
+    text-decoration: none;
+    color: var(--titlecolor);
+}
+
+@media (max-width: 1000px) {
+    section.project {
+        padding: 0 80px;
+    }
+}
+
+@media (max-width: 950px) {
+    .kotak-besar {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 900px) {
+    section.project {
+        padding: 0px 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    section.project {
+        padding: 0px 20px;
+    }
+}

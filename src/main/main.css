@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+
+.typewriter h1 {
+    overflow: hidden;
+    border-right: 0.15em solid var(--thumbcolor);
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: 0.15em;
+    font-family: "Pacifico", cursive;
+    animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+.main {
+    padding: 20px 120px;
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100vh;
+    transition: 0.4s all linear;
+    position: relative;
+    color: var(--titlecolor);
+}
+
+nav.dark + .main {
+    background-color: var(--darkBc);
+}
+
+nav.dark + .main h1 {
+    color: var(--baccolor);
+}
+
+nav.dark + .main p {
+    color: var(--baccolor);
+}
+
+nav.dark + .main .socials svg {
+    fill: var(--baccolor);
+}
+
+.main h1 {
+    cursor: pointer;
+    transition: 0.2s all;
+    text-shadow: 4px 3px 0 var(--thumbcolor);
+}
+
+.main p {
+    cursor: pointer;
+    transition: 0.2s all;
+}
+
+.main p span {
+    position: relative;
+}
+
+.main .socials {
+    cursor: pointer;
+}
+
+nav.dark + .main .underline::before {
+    z-index: 0;
+}
+
+.underline {
+    position: relative;
+}
+
+.underline:hover::before {
+    background: hsla(51, 100%, 50%, 0.804);
+}
+
+.underline::before {
+    content: "";
+    position: absolute;
+    bottom: 0.3rem;
+    left: 0;
+    width: 100%;
+    height: 0.7rem;
+    background: hsla(51, 100%, 49%, 0.404);
+    z-index: 0;
+    border-radius: 0.5rem;
+    transition: 0.35s;
+}
+/* The typing effect */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+    from,
+    to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: var(--thumbcolor);
+    }
+}
+
+@media (max-width: 1000px) {
+    .main {
+        padding: 20px 80px;
+    }
+}
+
+@media (max-width: 900px) {
+    .main {
+        padding: 20px 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .main h1 {
+        font-size: 1.5em;
+    }
+    .main {
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 20px;
+        gap: 100px;
+    }
+    .main p {
+        font-size: 0.8em;
+    }
+    .main .socials {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        margin-bottom: 10%;
+    }
+}
+
+@media (max-width: 350px) {
+    .main h1 {
+        font-size: 1em;
+    }
+    .main p {
+        font-size: 0.7em;
+    }
+}

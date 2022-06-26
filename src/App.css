@@ -1,0 +1,21 @@
+:root {
+    --baccolor: #f0eef2;
+    --forecolor: #a8a3b2;
+    --titlecolor: #7f7888;
+    --thumbcolor: #a8a3b273;
+    --darkBc: #2c3639;
+}
+
+nav.dark + .loading {
+    background-color: var(--darkBc);
+    color: var(--baccolor);
+}
+
+.loading {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
